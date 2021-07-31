@@ -1,41 +1,59 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = {
-  entry: path.join(__dirname, "src", "index.js"),
-
+const config = {
+  entry: path.join(__dirname, 'src', 'index.js'),
   output: {
-    path:path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, 'build'),
   },
-
   module: {
     rules: [
       {
         test: /\.?js$/,
+        include: path.resolve(__dirname, 'src'),
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
-          }
-        }
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      }
-    ]
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
-
-  devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    open: true,
-    port: 9000
-  },
-
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "index.html")
-    })
-  ]
+      template: path.join(__dirname, 'src', 'index.html'),
+    }),
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'build'),
+    open: true,
+    port: 9000,
+    hot: true,
+  },
+}
+
+module.exports = () => {
+  if (process.env.NODE_ENV.includes('production')) {
+    config.mode = 'production'
+    config.optimization = {
+      minimize: true,
+      mangleWasmImports: true,
+      removeAvailableModules: true,
+      removeEmptyChunks: true,
+      mergeDuplicateChunks: true,
+      providedExports: true,
+      mangleExports: 'size',
+    }
+    config.devtool = 'source-map'
+  } else {
+    config.mode = 'development'
+    config.devtool = 'cheap-module-source-map'
+  }
+  return config
 }
