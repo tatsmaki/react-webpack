@@ -1,0 +1,32 @@
+.card-tags {
+  display: inline-flex;
+  gap: 5px;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+.card-tag {
+  border: 1px #00000030 solid;
+  border-radius: 10px;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.autumn {
+  background-color: rgb(255, 208, 208);
+}
+
+.nature {
+  background-color: rgb(227, 255, 227);
+}
+
+.typescript,
+.ts,
+.react {
+  background-color: rgb(212, 233, 255);
+}
+
+.javascript,
+.js {
+  background-color: rgb(255, 255, 210);
+}

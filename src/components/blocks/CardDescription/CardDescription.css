@@ -1,0 +1,21 @@
+.card-description {
+  font-size: 0.9rem;
+}
+
+.paragraph {
+  display: block;
+  height: 2.1rem;
+  text-align: justify;
+  overflow: hidden;
+}
+
+.read-more {
+  color: gray;
+  user-select: none;
+  cursor: pointer;
+}
+
+.read-more:hover {
+  color: rgb(83, 83, 111);
+  text-decoration: underline;
+}

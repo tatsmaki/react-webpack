@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Card } from 'components/blocks/Card'
+import { AddCard } from 'components/blocks/AddCard'
 import { CARDS_DATA } from 'constants'
 
 const Grid = () => {
@@ -9,6 +10,7 @@ const Grid = () => {
       {CARDS_DATA.map((cardData) => {
         return <Card key={cardData.id}>{cardData}</Card>
       })}
+      <AddCard />
     </div>
   )
 }

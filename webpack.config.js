@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ESLintWebpackPlugin = require('eslint-webpack-plugin')
 
 const config = {
   entry: path.join(__dirname, 'src', 'index.js'),
@@ -28,6 +29,13 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html'),
+    }),
+    new ESLintWebpackPlugin({
+      extensions: ['js'],
+      emitError: true,
+      failOnError: true,
+      emitWarning: true,
+      failOnWarning: false,
     }),
   ],
   devServer: {

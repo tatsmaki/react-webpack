@@ -6,7 +6,7 @@ import { Grid } from 'components/blocks/Grid'
 const App = () => {
   return (
     <div className="app">
-      <Input placeholder="Search" />
+      <Input placeholder="Search" icon="search" />
       <Grid />
     </div>
   )

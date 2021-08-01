@@ -1,0 +1,6 @@
+.viewed {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  user-select: none;
+}

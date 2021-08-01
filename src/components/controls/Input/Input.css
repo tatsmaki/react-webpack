@@ -7,4 +7,13 @@
   border: 1px solid #00000030;
   border-radius: 20px;
   outline: none;
+  font-size: 1.1rem;
+}
+
+.input-icon {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  color: gray;
+  pointer-events: none;
 }
