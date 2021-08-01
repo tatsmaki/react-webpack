@@ -1,0 +1,6 @@
+.card {
+  width: 300px;
+  height: 300px;
+  outline: 1px #00000030 solid;
+  box-shadow: 2px 3px 0 #00000070;
+}
