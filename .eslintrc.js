@@ -27,5 +27,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.js'] }],
     'jsx-a11y/control-has-associated-label': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
+    'jsx-a11y/no-static-element-interactions': 0,
   },
 }

@@ -1,8 +1,17 @@
 .grid {
   width: 100%;
+  height: calc(100% - 80px);
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, 300px);
   grid-template-rows: repeat(auto-fit, 300px);
   justify-content: center;
+  overflow-y: auto;
+}
+
+.grid:after {
+  content: '';
+  display: block;
+  height: 15px;
+  grid-column: 1;
 }

@@ -9,6 +9,7 @@ export const CARDS_DATA = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium sagittis velit pulvinar lacinia. Nullam tristique bibendum metus. Donec libero sem, ultrices condimentum magna sit amet, efficitur interdum ex. Maecenas tincidunt bibendum eros. Nam porta, mi tincidunt ornare tempus, magna magna faucibus eros, ac rhoncus felis lectus a erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum pulvinar ullamcorper sagittis. Pellentesque dui nisl, consequat et purus vel, ultrices tempor lacus. Ut finibus ex semper pellentesque ullamcorper.',
     tags: ['Ameno', 'Dorime', 'Nature'],
+    isFavorite: false,
     liked: 525,
     viewed: 1566,
   },
@@ -19,6 +20,7 @@ export const CARDS_DATA = [
     description:
       'Morbi commodo turpis scelerisque mi maximus, vel gravida ligula vestibulum. Phasellus commodo, odio non tristique eleifend, massa diam pretium sapien, ac cursus dolor dolor ut nisl. Fusce accumsan lobortis mollis. In luctus erat bibendum mauris lobortis, eu gravida ex porta. Nam efficitur convallis arcu eget tristique. Pellentesque sit amet leo sapien. Vivamus ullamcorper eget leo quis commodo. Phasellus bibendum dui eu congue consectetur. Nulla facilisi.',
     tags: ['Interimo ', 'Adapare', 'Autumn'],
+    isFavorite: false,
     liked: 123,
     viewed: 454,
   },
@@ -29,6 +31,7 @@ export const CARDS_DATA = [
     description:
       'Donec ut vehicula lectus. Phasellus neque orci, venenatis ut urna vel, vehicula ullamcorper mi. Morbi at dolor lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer sed magna faucibus, auctor risus at, auctor magna. Aenean viverra sodales nunc, eget dignissim enim pulvinar ut. Vestibulum felis lectus, auctor id nunc eget, sollicitudin accumsan neque.',
     tags: ['Ameno', 'Latire', 'JavaScript'],
+    isFavorite: false,
     liked: 1414,
     viewed: 2442,
   },
@@ -40,6 +43,7 @@ export const CARDS_DATA = [
     description:
       'Mauris in lacinia lorem. Suspendisse vitae faucibus sapien, quis sollicitudin enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices leo et arcu condimentum aliquet eget id risus. Integer a mi eget purus sagittis congue. Phasellus malesuada eros et laoreet accumsan. Fusce non est quam. Pellentesque quis massa tincidunt, maximus erat vehicula, vulputate nisi.',
     tags: ['React', 'TypeScript'],
+    isFavorite: false,
     liked: 124,
     viewed: 353,
   },

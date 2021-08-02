@@ -9,7 +9,7 @@ import { Viewed } from 'components/blocks/Viewed'
 
 const Card = (props) => {
   const {
-    children: { image, title, description, tags, liked, viewed },
+    children: { image, title, description, tags, isFavorite, liked, viewed },
   } = props
 
   return (
@@ -20,7 +20,7 @@ const Card = (props) => {
         <CardDescription description={description} />
         <CardTags tags={tags} />
         <div className="card-actions">
-          <Like liked={liked} />
+          <Like isFavorite={isFavorite} liked={liked} />
           <Viewed viewed={viewed} />
         </div>
       </div>
