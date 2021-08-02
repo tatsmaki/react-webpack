@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="header">
-        <Input placeholder="Search" icon="search" />
+        <Input type="search" placeholder="Search" icon="search" />
       </div>
       <Grid />
     </div>

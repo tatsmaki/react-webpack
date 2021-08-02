@@ -2,6 +2,8 @@
   width: 100%;
   height: calc(100% - 80px);
   display: grid;
+  padding: 1px;
+  box-sizing: border-box;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, 300px);
   grid-template-rows: repeat(auto-fit, 300px);
@@ -10,7 +12,7 @@
 }
 
 .grid:after {
-  content: '';
+  content: "";
   display: block;
   height: 15px;
   grid-column: 1;

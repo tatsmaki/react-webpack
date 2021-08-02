@@ -3,7 +3,9 @@ import { Add } from '@material-ui/icons'
 
 import { FormModal } from 'components/blocks/FormModal'
 
-const AddCard = () => {
+const AddCard = (props) => {
+  const { handleCardShift } = props
+
   const [isModal, setIsModal] = useState(false)
 
   const handleOpenModal = () => {
@@ -11,13 +13,20 @@ const AddCard = () => {
   }
 
   const handleCloseModal = (event) => {
-    event.stopPropagation()
+    if (event) {
+      event.stopPropagation()
+    }
     setIsModal(false)
   }
 
   return (
     <div className="add-card" onClick={handleOpenModal}>
-      {isModal && <FormModal onClose={handleCloseModal} />}
+      {isModal && (
+        <FormModal
+          handleCardShift={handleCardShift}
+          onClose={handleCloseModal}
+        />
+      )}
       <Add fontSize="large" />
     </div>
   )

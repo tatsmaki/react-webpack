@@ -9,7 +9,17 @@ import { Viewed } from 'components/blocks/Viewed'
 
 const Card = (props) => {
   const {
-    children: { image, title, description, tags, isFavorite, liked, viewed },
+    children: {
+      image = '',
+      title,
+      description,
+      author,
+      createdAt,
+      tags = [],
+      isFavorite = false,
+      liked = 0,
+      viewed = 0,
+    },
   } = props
 
   return (
@@ -17,7 +27,11 @@ const Card = (props) => {
       <CardImage image={image} />
       <div className="card-body">
         <CardTitle title={title} />
-        <CardDescription description={description} />
+        <CardDescription
+          description={description}
+          author={author}
+          createdAt={createdAt}
+        />
         <CardTags tags={tags} />
         <div className="card-actions">
           <Like isFavorite={isFavorite} liked={liked} />

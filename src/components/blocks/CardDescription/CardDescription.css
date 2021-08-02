@@ -1,17 +1,23 @@
 .card-description {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .paragraph {
   display: block;
-  height: 2.1rem;
+  height: 1.9rem;
   text-align: justify;
   overflow: hidden;
 }
 
-.read-more {
-  color: gray;
+.additional {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
   user-select: none;
+  color: gray;
+}
+
+.read-more {
   cursor: pointer;
 }
 

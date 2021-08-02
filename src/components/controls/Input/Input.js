@@ -6,7 +6,15 @@ const INPUT_ICONS = {
 }
 
 const Input = (props) => {
-  const { placeholder, icon, onChange } = props
+  const {
+    type = 'text',
+    autocomplete = 'off',
+    placeholder,
+    icon,
+    name,
+    onChange,
+  } = props
+
   const inputIcon = INPUT_ICONS[icon]
 
   const handleChange = (event) => {
@@ -19,6 +27,9 @@ const Input = (props) => {
     <div className="input-wrapper">
       <input
         className="input"
+        type={type}
+        name={name}
+        autoComplete={autocomplete}
         placeholder={placeholder}
         onChange={handleChange}
       />

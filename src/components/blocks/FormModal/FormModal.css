@@ -11,7 +11,7 @@
 }
 
 .form-body {
-  width: 50%;
+  width: 300px;
   height: 50%;
   background-color: white;
   padding: 20px;
@@ -21,10 +21,18 @@
 .form-title {
   width: 100%;
   display: inline-flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .close-icon {
   color: gray;
   cursor: pointer;
+}
+
+.form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

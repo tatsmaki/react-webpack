@@ -12,6 +12,7 @@ const CardTags = (props) => {
           </span>
         )
       })}
+      {!tags.length && <span className="card-tag">Add Tag</span>}
     </div>
   )
 }
