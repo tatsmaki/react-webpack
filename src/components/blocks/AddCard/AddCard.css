@@ -10,3 +10,7 @@
   color: gray;
   cursor: pointer;
 }
+
+.add-card:hover {
+  background-color: #00000010;
+}

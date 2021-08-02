@@ -7,10 +7,10 @@ import { CARDS_DATA } from 'constants'
 const Grid = () => {
   return (
     <div className="grid">
+      <AddCard />
       {CARDS_DATA.map((cardData) => {
         return <Card key={cardData.id}>{cardData}</Card>
       })}
-      <AddCard />
     </div>
   )
 }
