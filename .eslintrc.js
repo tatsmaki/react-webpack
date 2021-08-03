@@ -22,6 +22,7 @@ module.exports = {
     semi: 0,
     'arrow-body-style': 0,
     'no-param-reassign': ['warn'],
+    'react/button-has-type': ['warn'],
     'react/prop-types': 0,
     'prettier/prettier': ['error'],
     'import/prefer-default-export': 0,

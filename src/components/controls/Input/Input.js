@@ -26,8 +26,8 @@ const Input = (props) => {
   return (
     <div className="input-wrapper">
       <input
-        className="input"
-        type={type}
+        className={`input input-${type}`}
+        type="text"
         name={name}
         autoComplete={autocomplete}
         placeholder={placeholder}

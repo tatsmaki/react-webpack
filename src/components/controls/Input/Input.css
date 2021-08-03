@@ -8,14 +8,13 @@
   padding: 6px 12px;
   border: 1px solid #00000030;
   outline: none;
-}
-
-.input[type="search"] {
   border-radius: 20px;
   font-size: 1.1rem;
 }
 
-.input[type="text"] {
+.input-text {
+  border-radius: 0;
+  font-size: 0.9rem;
   width: 100%;
 }
 
