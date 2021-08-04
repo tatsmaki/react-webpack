@@ -19,8 +19,8 @@ export const CARDS_DATA = LOCAL_CARDS_DATA || [
     createdAt: '2021-08-01',
     tags: ['Ameno', 'Dorime', 'Nature'],
     isFavorite: false,
-    liked: 525,
-    viewed: 1566,
+    likes: 525,
+    views: 1566,
   },
   {
     id: 2,
@@ -31,8 +31,8 @@ export const CARDS_DATA = LOCAL_CARDS_DATA || [
     createdAt: '2021-08-01',
     tags: ['Interimo ', 'Adapare', 'Autumn'],
     isFavorite: false,
-    liked: 123,
-    viewed: 454,
+    likes: 123,
+    views: 454,
   },
   {
     id: 3,
@@ -43,8 +43,8 @@ export const CARDS_DATA = LOCAL_CARDS_DATA || [
     createdAt: '2021-08-01',
     tags: ['Ameno', 'Latire', 'JavaScript'],
     isFavorite: false,
-    liked: 1414,
-    viewed: 2442,
+    likes: 1414,
+    views: 2442,
   },
   {
     id: 4,
@@ -56,7 +56,7 @@ export const CARDS_DATA = LOCAL_CARDS_DATA || [
     createdAt: '2021-08-02',
     tags: ['React', 'TypeScript'],
     isFavorite: false,
-    liked: 124,
-    viewed: 353,
+    likes: 124,
+    views: 353,
   },
 ]

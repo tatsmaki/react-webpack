@@ -5,7 +5,7 @@ import { CardTitle } from 'components/blocks/CardTitle'
 import { CardDescription } from 'components/blocks/CardDescription'
 import { CardTags } from 'components/blocks/CardTags'
 import { Like } from 'components/controls/Like'
-import { Viewed } from 'components/blocks/Viewed'
+import { Views } from 'components/blocks/Views'
 
 const Card = (props) => {
   const {
@@ -17,8 +17,8 @@ const Card = (props) => {
       createdAt,
       tags = [],
       isFavorite = false,
-      liked = 0,
-      viewed = 0,
+      likes = 0,
+      views = 0,
     },
   } = props
 
@@ -34,8 +34,8 @@ const Card = (props) => {
         />
         <CardTags tags={tags} />
         <div className="card-actions">
-          <Like isFavorite={isFavorite} liked={liked} />
-          <Viewed viewed={viewed} />
+          <Like isFavorite={isFavorite} likes={likes} />
+          <Views views={views} />
         </div>
       </div>
     </div>

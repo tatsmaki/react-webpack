@@ -1,15 +1,15 @@
 import React from 'react'
 import { Visibility } from '@material-ui/icons'
 
-const Viewed = (props) => {
-  const { viewed } = props
+const Views = (props) => {
+  const { views } = props
 
   return (
-    <span className="viewed">
+    <span className="views">
       <Visibility color="disabled" />
-      <span>{viewed}</span>
+      <span>{views}</span>
     </span>
   )
 }
 
-export { Viewed }
+export { Views }

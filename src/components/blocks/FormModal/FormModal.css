@@ -10,14 +10,14 @@
   background-color: #00000070;
 }
 
-.form-body {
+.form-modal-body {
   width: 300px;
   background-color: white;
   padding: 20px;
   border-radius: 20px;
 }
 
-.form-title {
+.form-modal-title {
   width: 100%;
   display: inline-flex;
   align-items: center;
@@ -28,29 +28,4 @@
 .close-icon {
   color: gray;
   cursor: pointer;
-}
-
-.form {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.form-likes {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.9rem;
-}
-
-.radio-group {
-  display: inline-flex;
-  gap: 50px;
-}
-
-.label {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: gray;
 }

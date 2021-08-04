@@ -1,15 +1,16 @@
 import React from 'react'
 
 const Select = (props) => {
-  const { name } = props
+  const { name, options } = props
 
   return (
     <div className="select-wrapper">
       <select className="select" name={name}>
-        <option value="You">You</option>
-        <option value="Kate">Kate</option>
-        <option value="Ayaka">Ayaka</option>
-        <option value="Kadzuha">Kadzuha</option>
+        {options.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
       </select>
     </div>
   )
