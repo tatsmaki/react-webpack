@@ -4,6 +4,7 @@ const CARDS_DESCRIPTION = loremIpsum.generateParagraphs(4).split('\n')
 
 export const DEFAULT_IMAGE = 'https://i.stack.imgur.com/y9DpT.jpg'
 export const TODAY_DATE = new Date().toISOString().split('T')[0]
+export const RANDOM_IMAGE = 'https://source.unsplash.com/random?sig='
 
 const LOCAL_CARDS_DATA = JSON.parse(localStorage.getItem('@/LS_KEY_CARDS'))
 

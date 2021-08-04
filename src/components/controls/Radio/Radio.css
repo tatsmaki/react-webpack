@@ -1,0 +1,10 @@
+.radio-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.radio {
+  margin: 0;
+  zoom: 1.6;
+}

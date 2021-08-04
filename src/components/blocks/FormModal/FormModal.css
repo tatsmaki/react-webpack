@@ -34,7 +34,7 @@
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 
 .form-likes {
@@ -42,4 +42,15 @@
   align-items: center;
   gap: 10px;
   font-size: 0.9rem;
+}
+
+.radio-group {
+  display: inline-flex;
+  gap: 50px;
+}
+
+.label {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: gray;
 }
