@@ -1,31 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Loop } from '@material-ui/icons'
 
 import { Card } from 'components/blocks/Card'
-import { AddCard } from 'components/blocks/AddCard'
-import { CARDS_DATA } from 'constants'
 
 const Grid = (props) => {
-  const { search } = props
-
-  const [cards, setCards] = useState(CARDS_DATA)
-
-  const handleCardShift = (card) => {
-    setCards((prevState) => {
-      const newState = [card, ...prevState]
-
-      localStorage.setItem('@/LS_KEY_CARDS', JSON.stringify(newState))
-      return newState
-    })
-  }
+  const { apiData, isLoading } = props
 
   return (
     <div className="grid">
-      <AddCard handleCardShift={handleCardShift} />
-      {cards
-        .filter((cardData) => cardData.title.toLowerCase().includes(search))
-        .map((cardData) => {
-          return <Card key={cardData.id}>{cardData}</Card>
-        })}
+      {isLoading && (
+        <div className="loading">
+          <Loop fontSize="large" />
+        </div>
+      )}
+      {apiData?.docs.map((cardData) => {
+        const { _id } = cardData
+
+        return <Card key={_id}>{cardData}</Card>
+      })}
     </div>
   )
 }

@@ -16,7 +16,17 @@ const config = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
+            presets: [
+              [
+                '@babel/preset-env',
+                {
+                  targets: {
+                    esmodules: true,
+                  },
+                },
+              ],
+              '@babel/preset-react',
+            ],
           },
         },
       },
@@ -49,6 +59,7 @@ const config = {
       components: path.join(__dirname, 'src/components'),
       constants: path.join(__dirname, 'src/constants'),
       helpers: path.join(__dirname, 'src/helpers'),
+      api: path.join(__dirname, 'src/api'),
     },
   },
 }

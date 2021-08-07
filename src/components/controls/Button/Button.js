@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Button = (props) => {
-  const { children, type = 'button', onClick } = props
+  const { children, type = 'button', onClick, disabled } = props
 
   const handleClick = (event) => {
     if (onClick) {
@@ -10,7 +10,12 @@ const Button = (props) => {
   }
 
   return (
-    <button type={type} className="button" onClick={handleClick}>
+    <button
+      type={type}
+      className="button"
+      onClick={handleClick}
+      disabled={disabled}
+    >
       <span>{children}</span>
     </button>
   )

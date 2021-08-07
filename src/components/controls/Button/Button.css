@@ -10,3 +10,8 @@
 .button:hover {
   background-color: #00000010;
 }
+
+.button:disabled {
+  background-color: #00000010;
+  cursor: default;
+}
