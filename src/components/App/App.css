@@ -23,9 +23,27 @@ select {
 }
 
 .header {
-  height: 140px;
-  display: flex;
-  flex-direction: column;
+  height: 80px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: space-evenly;
+  justify-items: center;
+}
+
+.grid-header {
+  width: 90%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, 25%);
+  color: gray;
+  padding: 0 5px 10px 5px;
+  box-sizing: border-box;
+}
+
+.error {
+  position: absolute;
+  top: 100px;
+  color: red;
 }

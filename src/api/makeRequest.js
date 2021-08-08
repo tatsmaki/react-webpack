@@ -1,9 +1,9 @@
 const BASE_ENDPOINT = 'https://the-one-api.dev/v2/'
 
-const makeRequest = async (search, page) => {
+const makeRequest = async (search, page, sortBy) => {
   try {
     const response = await fetch(
-      `${BASE_ENDPOINT}character?name=/${search}/i&limit=10&page=${page}`,
+      `${BASE_ENDPOINT}character?name=/${search}/i&limit=10&page=${page}&sort=${sortBy}`,
       {
         headers: {
           Accept: 'application/json',
@@ -11,11 +11,10 @@ const makeRequest = async (search, page) => {
         },
       }
     )
-    const json = await response.json()
 
-    return json
+    return response
   } catch (error) {
-    throw new Error(error)
+    return new Error(error)
   }
 }
 

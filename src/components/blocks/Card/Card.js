@@ -8,9 +8,9 @@ const Card = (props) => {
   return (
     <div className="card">
       <span>{name}</span>
-      <span>{race}</span>
-      <span>{birth}</span>
-      <span>{death}</span>
+      <span>{race !== 'NaN' && race}</span>
+      <span>{birth !== 'NaN' && birth.replace(/ ,|, /g, ' ')}</span>
+      <span>{death !== 'NaN' && death.replace(/ ,|, /g, ' ')}</span>
     </div>
   )
 }

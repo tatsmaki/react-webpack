@@ -4,20 +4,28 @@ import { Input } from 'components/controls/Input'
 import { Pagination } from 'components/blocks/Pagination'
 import { Grid } from 'components/blocks/Grid'
 import { makeRequest } from 'api/makeRequest'
+import { Sort } from 'components/controls/Sort'
 
 const App = () => {
   const [search, serSearch] = useState('')
   const [page, setPage] = useState(1)
+  const [sortBy, setSortBy] = useState('name:asc')
   const [isLoading, setIsLoading] = useState(false)
   const [apiData, setApiData] = useState(null)
+  const [error, setError] = useState(false)
 
   useEffect(async () => {
     if (isLoading) {
-      const response = await makeRequest(search, page)
+      const response = await makeRequest(search, page, sortBy)
 
-      if (response) {
-        console.log(response)
-        setApiData(response)
+      if (response.ok) {
+        const json = await response.json()
+
+        setApiData(json)
+        setError(false)
+      } else {
+        setApiData(null)
+        setError(response)
       }
       setIsLoading(false)
     }
@@ -38,6 +46,11 @@ const App = () => {
     setIsLoading(true)
   }
 
+  const handleSortBy = (newSort) => {
+    setSortBy(newSort)
+    setIsLoading(true)
+  }
+
   return (
     <div className="app" tabIndex="0" onKeyDown={handleKeyDown}>
       <div className="header">
@@ -55,6 +68,27 @@ const App = () => {
           />
         )}
       </div>
+      {apiData && (
+        <div className="grid-header">
+          <Sort sortBy={sortBy} onClick={handleSortBy}>
+            Name
+          </Sort>
+          <Sort sortBy={sortBy} onClick={handleSortBy}>
+            Race
+          </Sort>
+          <Sort sortBy={sortBy} onClick={handleSortBy}>
+            Birth
+          </Sort>
+          <Sort sortBy={sortBy} onClick={handleSortBy}>
+            Death
+          </Sort>
+        </div>
+      )}
+      {error && (
+        <span className="error">
+          {error.status} {error.statusText}
+        </span>
+      )}
       <Grid apiData={apiData} isLoading={isLoading} />
     </div>
   )
