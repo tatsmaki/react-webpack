@@ -1,0 +1,10 @@
+.like {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  user-select: none;
+}
+
+.like-icon {
+  cursor: pointer;
+}

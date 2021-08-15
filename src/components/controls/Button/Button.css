@@ -1,0 +1,17 @@
+.button {
+  height: 32px;
+  outline: none;
+  border: 1px solid #00000030;
+  border-radius: 0;
+  background-color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #00000010;
+}
+
+.button:disabled {
+  background-color: #00000010;
+  cursor: default;
+}

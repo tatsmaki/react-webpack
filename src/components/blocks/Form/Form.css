@@ -1,0 +1,24 @@
+.form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-likes {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.radio-group {
+  display: inline-flex;
+  gap: 50px;
+}
+
+.label {
+  padding-left: 12px;
+  font-size: 0.9rem;
+  color: gray;
+}

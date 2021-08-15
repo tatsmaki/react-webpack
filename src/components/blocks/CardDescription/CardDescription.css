@@ -1,0 +1,27 @@
+.card-description {
+  font-size: 0.8rem;
+}
+
+.paragraph {
+  display: block;
+  height: 1.82rem;
+  text-align: justify;
+  overflow: hidden;
+}
+
+.additional {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  user-select: none;
+  color: gray;
+}
+
+.read-more {
+  cursor: pointer;
+}
+
+.read-more:hover {
+  color: rgb(83, 83, 111);
+  text-decoration: underline;
+}
